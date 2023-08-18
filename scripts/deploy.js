@@ -1,12 +1,12 @@
 const hre = require("hardhat");
 
 async function main() {
-  const Cafe = await hre.ethers.getContractFactory("Cafe");
-  const lock = await Lock.deploy();
+  const Caffe = await hre.ethers.getContractFactory("Cafe");
+  const Cafe = await Caffe.deploy();
 
-  await Cafe.deployed();
+  await Cafe.waitForDeployment();
 
-  console.log("Deployed address :", `${lock.target}`);
+  console.log("Deployed to :", `${Cafe.target}`);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
