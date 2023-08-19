@@ -1,12 +1,12 @@
 const hre = require("hardhat");
 
 async function main() {
-  const Caffe = await hre.ethers.getContractFactory("Cafe");
-  const Cafe = await Caffe.deploy();
+  const Chai = await hre.ethers.getContractFactory("chai"); //fetching bytecode and ABI
+  const chai = await Chai.deploy(); //creating an instance of our smart contract
 
-  await Cafe.waitForDeployment();
+  await chai.deployed(); //deploying your smart contract
 
-  console.log("Deployed to :", `${Cafe.target}`);
+  console.log("Deployed contract address:", `${chai.address}`);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
