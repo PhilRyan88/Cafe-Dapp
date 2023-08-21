@@ -32,7 +32,7 @@ function App() {
             window.location.reload();
           });
 
-          const provider = new ethers.BrowserProvider(window.ethereum);
+          const provider = new ethers.providers.Web3Provider(ethereum);
           const signer = provider.getSigner();
           const contract = new ethers.Contract(
             contractAddress,
