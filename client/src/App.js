@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import Buy from "./components/Buy";
 import Memos from "./components/Memos";
+import cafe from "./cafe.jpeg";
 import "./App.css";
 
 function App() {
@@ -53,7 +54,7 @@ function App() {
   // console.log(state);
   return (
     <div style={{ backgroundColor: "#EFEFEF", height: "100%" }}>
-      <img src={""} className="img-fluid" alt=".." width="100%" />
+      <img src={cafe} className="img-fluid" alt=".." width="100%" />
       <p
         class="text-muted lead "
         style={{ marginTop: "10px", marginLeft: "5px" }}
